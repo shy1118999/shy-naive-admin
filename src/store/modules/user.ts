@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 10:46:17
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 15:02:06
+ * @LastEditTime: 2022-08-22 18:52:48
  * @Description: user store
  */
 import { defineStore } from 'pinia'
@@ -39,15 +39,18 @@ export const useUserStore = defineStore('user-store', () => {
     })
   }
 
-  function logout(t: string) {
-    return new Promise((resolve, reject) => {
-      request.post(api.logout, { token: t }).then(() => {
-        removeToken()
-        token.value = ''
-        resolve({})
-      }).catch((error) => {
-        reject(error)
-      })
+  function logout() {
+    return new Promise((resolve) => {
+      removeToken()
+      token.value = ''
+      resolve({})
+      // request.post(api.logout, { token: t }).then(() => {
+      //   removeToken()
+      //   token.value = ''
+      //   resolve({})
+      // }).catch((error) => {
+      //   reject(error)
+      // })
     })
   }
 

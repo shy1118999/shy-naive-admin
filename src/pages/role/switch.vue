@@ -2,15 +2,17 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 11:07:54
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 14:18:28
+ * @LastEditTime: 2022-08-22 19:28:56
  * @Description: RoleSwitch
 -->
 <script setup lang="ts">
 import { useUserStore } from '~/store'
 import type { RoleType } from '~/typings/route'
 const userStore = useUserStore()
+const key = ref(1)
 function handleChange(value: unknown[]) {
   userStore.setRoles(value as RoleType[])
+  key.value++
 }
 </script>
 
@@ -23,5 +25,13 @@ function handleChange(value: unknown[]) {
         <n-checkbox value="user" label="User" />
       </n-space>
     </n-checkbox-group>
+    <div :key="key">
+      <n-tag v-permission="['admin']" type="success">
+        Admin
+      </n-tag>
+      <n-tag v-permission="['user']" type="success">
+        User
+      </n-tag>
+    </div>
   </div>
 </template>

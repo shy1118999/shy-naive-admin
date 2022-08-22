@@ -2,14 +2,13 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 09:05:03
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-19 11:08:51
+ * @LastEditTime: 2022-08-22 18:56:28
  * @Description: login
 -->
 <script setup lang="ts">
 import type { FormInst, FormRules } from 'naive-ui'
 import { Password, UserAdmin } from '@vicons/carbon'
 import { Eye20Regular, EyeOff20Regular } from '@vicons/fluent'
-import { message } from '~/composables'
 import { useUserStore } from '~/store'
 const INITIAL_DATA = {
   account: '',
@@ -29,16 +28,16 @@ const redirect = useRoute().query.redirect || '/'
 async function handleLogin() {
   // 验证
   if (formData.value.account.trim() === '') {
-    message.warning('请输入账号')
+    $message.warning('请输入账号')
     return
   }
   if (formData.value.password.trim() === '') {
-    message.warning('请输入密码')
+    $message.warning('请输入密码')
     return
   }
   try {
     await userState.login(formData.value.account, formData.value.password)
-    message.success('登陆成功')
+    $message.success('登陆成功')
     router.push({
       path: (redirect || '/') as string,
     })
@@ -71,7 +70,7 @@ async function handleLogin() {
           </n-input>
         </n-form-item>
         <n-form-item path="password">
-          <n-input v-model:value="formData.password" size="large" :type="showPwd ? 'text' : 'password'" placeholder="请输入密码">
+          <n-input v-model:value="formData.password" size="large" :type="showPwd ? 'text' : 'password'" placeholder="请输入密码" @keydown.enter="handleLogin">
             <template #prefix>
               <n-icon :component="Password" />
             </template>
@@ -92,6 +91,7 @@ async function handleLogin() {
       <div leading-normal text-sm color="gray-500/90">
         Copyright @ 2022-{{ new Date().getFullYear() }} ShyNaiveAdmin. All Rights Reserved
       </div>
+      <div class="h-30" />
     </div>
   </div>
 </template>

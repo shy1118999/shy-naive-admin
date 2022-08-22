@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 17:23:41
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 15:38:07
+ * @LastEditTime: 2022-08-22 18:49:41
  * @Description: constant
  */
 import { BasicLayout } from '~/layouts'
@@ -19,6 +19,7 @@ const routes: RouteRecord[] = [
       icon: 'shouye',
     },
     children: [
+      { path: '/profile', name: 'Profile', component: () => import('~/pages/user/profile.vue'), hidden: true, meta: { title: '个人中心' } },
       { path: '/dashboard', name: 'DashboardIndex', component: () => import('~/pages/dashboard/index.vue'), meta: { title: '主页', icon: 'shouye', breadcrumb: false } },
       { path: '/dashboard/workbench', name: 'DashboardWorkbench', component: () => import('~/pages/dashboard/workbench.vue'), meta: { title: '工作台', icon: 'dingdan' } },
       { path: '/dashboard/analysis', name: 'DashboardAnalysis', component: () => import('~/pages/dashboard/analysis.vue'), meta: { title: '分析页', icon: 'dingdan' } },
