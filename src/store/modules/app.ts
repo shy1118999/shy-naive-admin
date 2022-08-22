@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 18:15:02
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-18 18:23:20
+ * @LastEditTime: 2022-08-22 16:15:39
  * @Description: app store
  */
 import { defineStore } from 'pinia'
@@ -14,6 +14,7 @@ export const useAppStore = defineStore('app-store', {
       withoutAnimation: false,
     },
     device: 'desktop',
+    theme: useLocalStorage('theme', 'light'),
   }),
   actions: {
     toggleSideBar() {
@@ -25,6 +26,9 @@ export const useAppStore = defineStore('app-store', {
     },
     toggleDevice(device: string) {
       this.device = device
+    },
+    toggleTheme() {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark'
     },
   },
 })

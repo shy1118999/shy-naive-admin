@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 11:21:41
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 14:10:32
+ * @LastEditTime: 2022-08-22 15:35:22
  * @Description: permission store
  */
 import type { MenuOption } from 'naive-ui'
@@ -75,6 +75,7 @@ export const usePermissionStore = defineStore('permission-store', {
     routes: [] as RouteRecord[],
     addRoutes: [] as RouteRecord[],
     menus: [] as MenuOption[],
+    breadcrumbs: [],
   }),
   actions: {
     generateRoutes(roles: RoleType[]): Promise<RouteRecord[]> {
