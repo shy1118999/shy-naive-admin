@@ -17,8 +17,8 @@
   "dependencies": {
     "@vueuse/core": "^9.1.0",
     "axios": "^0.27.2",
+    "echarts": "^5.3.3",
     "naive-ui": "^2.32.1",
-    "nprogress": "^0.2.0",
     "pinia": "^2.0.18",
     "screenfull": "^6.0.2",
     "vue": "^3.2.37",
@@ -28,7 +28,6 @@
     "@iconify-json/carbon": "^1.1.7",
     "@shy1118/eslint-config": "^1.0.3",
     "@types/node": "^18.6.5",
-    "@types/nprogress": "^0.2.0",
     "@unocss/reset": "^0.45.5",
     "@vicons/carbon": "^0.12.0",
     "@vicons/fluent": "^0.12.0",

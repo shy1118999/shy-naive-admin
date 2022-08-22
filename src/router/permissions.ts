@@ -2,20 +2,18 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 16:02:49
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 15:03:05
+ * @LastEditTime: 2022-08-22 18:15:56
  * @Description: permissions
  */
-import NProgress from 'nprogress' // progress bar
 import type { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
 import router from './index'
 import { getToken } from '~/utils/auth' // get token from cookie
 import { useUserStore } from '~/store'
-
 const whiteList = ['/login', '/401', '/404'] // no redirect whitelist
 
 // 路由守卫
 router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
-  NProgress.start()
+  $loadingBar.start()
   if (whiteList.includes(to.path)) {
     next()
     return
@@ -42,7 +40,7 @@ router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormali
         catch (error) {
           userState.removeToken()
           next(`/login?redirect=${to.path}`)
-          NProgress.done()
+          $loadingBar.finish()
         }
       }
     }
@@ -65,5 +63,5 @@ router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormali
 })
 
 router.afterEach(() => {
-  NProgress.done()
+  $loadingBar.finish()
 })

@@ -5,6 +5,10 @@ declare global {
   const $: typeof import('vue/macros')['$']
   const $computed: typeof import('vue/macros')['$computed']
   const $customRef: typeof import('vue/macros')['$customRef']
+  const $dialog: typeof import('./src/composables/discrete-api')['$dialog']
+  const $loadingBar: typeof import('./src/composables/discrete-api')['$loadingBar']
+  const $message: typeof import('./src/composables/discrete-api')['$message']
+  const $notification: typeof import('./src/composables/discrete-api')['$notification']
   const $ref: typeof import('vue/macros')['$ref']
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
@@ -144,6 +148,7 @@ declare global {
   const useDocumentVisibility: typeof import('@vueuse/core')['useDocumentVisibility']
   const useDraggable: typeof import('@vueuse/core')['useDraggable']
   const useDropZone: typeof import('@vueuse/core')['useDropZone']
+  const useEcharts: typeof import('./src/composables/echarts')['useEcharts']
   const useElementBounding: typeof import('@vueuse/core')['useElementBounding']
   const useElementByPoint: typeof import('@vueuse/core')['useElementByPoint']
   const useElementHover: typeof import('@vueuse/core')['useElementHover']
@@ -277,6 +282,10 @@ declare module '@vue/runtime-core' {
     readonly $: UnwrapRef<typeof import('vue/macros')['$']>
     readonly $computed: UnwrapRef<typeof import('vue/macros')['$computed']>
     readonly $customRef: UnwrapRef<typeof import('vue/macros')['$customRef']>
+    readonly $dialog: UnwrapRef<typeof import('./src/composables/discrete-api')['$dialog']>
+    readonly $loadingBar: UnwrapRef<typeof import('./src/composables/discrete-api')['$loadingBar']>
+    readonly $message: UnwrapRef<typeof import('./src/composables/discrete-api')['$message']>
+    readonly $notification: UnwrapRef<typeof import('./src/composables/discrete-api')['$notification']>
     readonly $ref: UnwrapRef<typeof import('vue/macros')['$ref']>
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
@@ -416,6 +425,7 @@ declare module '@vue/runtime-core' {
     readonly useDocumentVisibility: UnwrapRef<typeof import('@vueuse/core')['useDocumentVisibility']>
     readonly useDraggable: UnwrapRef<typeof import('@vueuse/core')['useDraggable']>
     readonly useDropZone: UnwrapRef<typeof import('@vueuse/core')['useDropZone']>
+    readonly useEcharts: UnwrapRef<typeof import('./src/composables/echarts')['useEcharts']>
     readonly useElementBounding: UnwrapRef<typeof import('@vueuse/core')['useElementBounding']>
     readonly useElementByPoint: UnwrapRef<typeof import('@vueuse/core')['useElementByPoint']>
     readonly useElementHover: UnwrapRef<typeof import('@vueuse/core')['useElementHover']>
