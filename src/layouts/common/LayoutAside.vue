@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 17:47:22
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 16:54:27
+ * @LastEditTime: 2022-08-24 16:40:41
  * @Description: LayoutAside
 -->
 <script setup lang="ts">
@@ -36,7 +36,7 @@ function renderMenuIcon(options: MenuOption) {
 <template>
   <template v-if="!isMobile">
     <n-layout-sider
-      bordered class="fixed left-0 top-0 bottom-0 pt-60px"
+      bordered class="fixed left-0 top-0 bottom-0 pt-60px shadow z-9"
       collapse-mode="width"
       :collapsed-width="64"
       :width="240"

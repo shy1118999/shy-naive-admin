@@ -1,0 +1,135 @@
+<!--
+ * @Author: shaohang-shy
+ * @Date: 2022-08-23 20:07:48
+ * @LastEditors: shaohang-shy
+ * @LastEditTime: 2022-08-24 19:00:59
+ * @Description: LayoutTagsView
+-->
+<script setup lang="ts">
+import { Close } from '@vicons/carbon'
+import { useThemeVars } from 'naive-ui'
+import type { RouteLocationNormalizedLoaded } from 'vue-router'
+import type { TagView } from '~/typings/route'
+const tagsViewStore = useTagsViewStore()
+const route = useRoute()
+const router = useRouter()
+
+watch(route, () => {
+  if (route.name)
+    tagsViewStore.addView(getTagView(route))
+}, { immediate: true })
+
+function getTagView(route: RouteLocationNormalizedLoaded): TagView {
+  return {
+    name: route.name as string,
+    title: route.meta.title as string || 'no-title',
+    path: route.fullPath,
+    affix: !!route.meta.affix,
+    query: route.query,
+    noCache: !!route.meta.noCache,
+  }
+}
+
+function isActive(view: TagView) {
+  return view.path === route.fullPath
+}
+
+function handleToView(view: TagView) {
+  router.push({
+    path: view.path,
+    query: view.query,
+  })
+}
+
+function handleDelView(view: TagView) {
+  if (isActive(view)) {
+    // 重定向到首页
+    router.replace({ path: '/' })
+  }
+  tagsViewStore.delView(view)
+}
+const appStore = useAppStore()
+const isMobile = useLayout().isMobile
+const themeVars = useThemeVars()
+
+const x = ref(0)
+const y = ref(0)
+const showDropdown = ref(false)
+let currentTag: null | TagView = null
+function handleContextMenu(e: MouseEvent, tag: TagView) {
+  e.preventDefault()
+  showDropdown.value = false
+  currentTag = tag
+  nextTick().then(() => {
+    showDropdown.value = true
+    x.value = e.clientX
+    y.value = e.clientY
+  })
+}
+function onClickoutside() {
+  showDropdown.value = false
+}
+function handleSelect(key: string) {
+  showDropdown.value = false
+  if (!currentTag)
+    return
+  if (key === 'close') { handleDelView(currentTag) }
+  else if (key === 'close-all') {
+    if (isActive(currentTag)) {
+    // 重定向到首页
+      router.replace({ path: '/' })
+    }
+    tagsViewStore.delAllViews()
+  }
+  else if (key === 'close-other') {
+    if (!isActive(currentTag)) {
+    // 重定向到首页
+      router.replace({
+        path: currentTag.path,
+        query: currentTag.query,
+      })
+    }
+    tagsViewStore.delOthersViews(currentTag)
+  }
+}
+</script>
+
+<template>
+  <div class="h-40px fixed top-60px right-0 left-240px shadow z-9 bg" :style="{ left: isMobile ? '0px' : appStore.sidebar.opened ? '64px' : '240px', boxShadow: themeVars.boxShadow1 }">
+    <n-scrollbar x-scrollable>
+      <div ref="el" class="flex flex-row h-40px items-center px-2 gap-2 justify-start">
+        <n-button v-for="tag in tagsViewStore.visitedViews" :key="tag.path" class="flex-shrink-0" size="small" :secondary="!isActive(tag)" type="primary" @click="handleToView(tag)" @contextmenu="handleContextMenu($event, tag)">
+          {{ tag.title }}
+          <n-button v-if="!tag.affix" quaternary circle size="tiny" class="ml-1" @click.stop="handleDelView(tag)">
+            <n-icon>
+              <Close />
+            </n-icon>
+          </n-button>
+        </n-button>
+      </div>
+    </n-scrollbar>
+    <n-dropdown
+      placement="bottom-start"
+      trigger="manual"
+      :x="x"
+      :y="y"
+      :options="[
+        {
+          label: '关闭',
+          key: 'close',
+        },
+        {
+          label: '关闭其他',
+          key: 'close-other',
+        },
+        {
+          label: '关闭全部',
+          key: 'close-all',
+        },
+      ]"
+      :show="showDropdown"
+      :on-clickoutside="onClickoutside"
+      @select="handleSelect"
+    />
+  </div>
+</template>

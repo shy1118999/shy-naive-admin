@@ -2,9 +2,10 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 17:56:10
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:03:06
+ * @LastEditTime: 2022-08-24 18:17:48
  * @Description: Clock Chart
 -->
+
 <script setup lang="ts">
 import { type ECOption } from '~/composables'
 
@@ -233,6 +234,10 @@ const { domRef: chartRef } = useEcharts(lineOptions, (chart) => {
     })
   }, 1000)
 })
+</script>
+
+<script lang="ts">
+export default { name: 'ChartsClock' }
 </script>
 
 <template>
