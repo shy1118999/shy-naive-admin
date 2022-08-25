@@ -2,10 +2,11 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 18:15:02
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 16:46:14
+ * @LastEditTime: 2022-08-25 10:54:57
  * @Description: app store
  */
 import { defineStore } from 'pinia'
+import settings from '~/settings'
 
 export const useAppStore = defineStore('app-store', {
   state: () => ({
@@ -15,7 +16,7 @@ export const useAppStore = defineStore('app-store', {
     },
     device: 'desktop',
     theme: useLocalStorage('theme', 'light'),
-    showTagsView: true,
+    showTagsView: settings.tagsView === true,
   }),
   actions: {
     toggleSideBar() {

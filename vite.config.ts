@@ -9,6 +9,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { transformIndexWithEnv } from './plugin/transformIndexWithEnv/index'
+import settings from './src/settings'
 
 export default defineConfig({
   resolve: {
@@ -17,6 +19,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    transformIndexWithEnv({ ...settings }),
     Vue({
       reactivityTransform: true,
     }),

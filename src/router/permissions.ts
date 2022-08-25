@@ -2,15 +2,15 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 16:02:49
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:15:56
+ * @LastEditTime: 2022-08-25 10:49:21
  * @Description: permissions
  */
 import type { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
 import router from './index'
 import { getToken } from '~/utils/auth' // get token from cookie
-import { useUserStore } from '~/store'
-const whiteList = ['/login', '/401', '/404'] // no redirect whitelist
-
+import { useUserStore } from '~/store' // no redirect whitelist
+import settings from '~/settings'
+const whiteList = ['/login', '/401', '/404']
 // 路由守卫
 router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
   $loadingBar.start()
@@ -62,6 +62,7 @@ router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormali
   }
 })
 
-router.afterEach(() => {
+router.afterEach((to) => {
+  useTitle(to.meta.title ? `${to.meta.title} - ${settings.title}` : settings.title)
   $loadingBar.finish()
 })

@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 11:03:18
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:29:22
+ * @LastEditTime: 2022-08-25 09:41:03
  * @Description: admin router
  */
 import type { RouteRecord } from '~/typings/route'
@@ -47,6 +47,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/charts/clock.vue'),
         meta: {
           title: '时钟仪表盘',
+          keepAlive: true,
         },
       },
     ],

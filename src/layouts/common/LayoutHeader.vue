@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 17:37:38
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 16:52:05
+ * @LastEditTime: 2022-08-25 10:52:19
  * @Description: Layout Header
 -->
 <script setup lang="ts">
@@ -14,10 +14,10 @@ import MenuScreenfull from './MenuScreenfull.vue'
 import MenuLightDark from './MenuLightDark.vue'
 import MenuUserInfo from './MenuUserInfo.vue'
 import { useAppStore } from '~/store'
+import settings from '~/settings'
+const { title, logo } = settings
 const appStore = useAppStore()
 const themeVars = useThemeVars()
-const logo = 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
-const title = 'Vue Naive Admin'
 const isMobile = useLayout().isMobile
 </script>
 
