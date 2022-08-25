@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 16:50:10
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 14:13:39
+ * @LastEditTime: 2022-08-25 09:37:07
  * @Description: route.d.ts
  */
 // import { Component } from 'vue'
@@ -38,7 +38,7 @@ interface RouteMeta {
   roles?: RoleType[],
   title: string,
   icon?: string,
-  noCache?: boolean,
+  keepAlive?: boolean,
   affix?: boolean,
   breadcrumb?: boolean,
   activeMenu?: string,
@@ -50,5 +50,5 @@ interface TagView {
   path: string,
   affix?: boolean,
   query?: LocationQuery,
-  noCache?: boolean
+  keepAlive?: boolean
 }

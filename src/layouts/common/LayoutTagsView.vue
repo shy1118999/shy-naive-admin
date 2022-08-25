@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-23 20:07:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-25 09:31:10
+ * @LastEditTime: 2022-08-25 09:38:19
  * @Description: LayoutTagsView
 -->
 <script setup lang="ts">
@@ -30,7 +30,7 @@ function getTagView(route: RouteLocationNormalizedLoaded): TagView {
     path: route.fullPath,
     affix: !!route.meta.affix,
     query: route.query,
-    noCache: !!route.meta.noCache,
+    keepAlive: route.meta.keepAlive === true,
   }
 }
 

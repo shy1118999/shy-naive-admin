@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-24 13:59:22
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 14:26:50
+ * @LastEditTime: 2022-08-25 09:38:34
  * @Description: tagsView
  */
 import { defineStore } from 'pinia'
@@ -26,7 +26,7 @@ export const useTagsViewStore = defineStore('tags-view-store', {
     addCachedView(view: TagView) {
       if (this.cachedViews.includes(view.name))
         return
-      if (!view.noCache)
+      if (view.keepAlive === true)
         this.cachedViews.push(view.name)
     },
     delView(view: TagView) {
