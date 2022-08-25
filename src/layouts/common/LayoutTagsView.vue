@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-23 20:07:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 19:00:59
+ * @LastEditTime: 2022-08-25 09:31:10
  * @Description: LayoutTagsView
 -->
 <script setup lang="ts">
@@ -15,8 +15,12 @@ const route = useRoute()
 const router = useRouter()
 
 watch(route, () => {
-  if (route.name)
+  if (route.name) {
     tagsViewStore.addView(getTagView(route))
+    nextTick(() => {
+      handleScroll()
+    })
+  }
 }, { immediate: true })
 
 function getTagView(route: RouteLocationNormalizedLoaded): TagView {
@@ -92,13 +96,23 @@ function handleSelect(key: string) {
     tagsViewStore.delOthersViews(currentTag)
   }
 }
+
+const scrollContainer = ref()
+const tags = ref()
+
+function handleScroll() {
+  for (const tag of tags.value) {
+    if (!tag.secondary)
+      scrollContainer.value.scrollTo({ left: tag.$el.offsetLeft - 8 })
+  }
+}
 </script>
 
 <template>
   <div class="h-40px fixed top-60px right-0 left-240px shadow z-9 bg" :style="{ left: isMobile ? '0px' : appStore.sidebar.opened ? '64px' : '240px', boxShadow: themeVars.boxShadow1 }">
-    <n-scrollbar x-scrollable>
-      <div ref="el" class="flex flex-row h-40px items-center px-2 gap-2 justify-start">
-        <n-button v-for="tag in tagsViewStore.visitedViews" :key="tag.path" class="flex-shrink-0" size="small" :secondary="!isActive(tag)" type="primary" @click="handleToView(tag)" @contextmenu="handleContextMenu($event, tag)">
+    <n-scrollbar ref="scrollContainer" x-scrollable>
+      <div class="flex flex-row h-40px items-center px-2 gap-2 justify-start">
+        <n-button v-for="tag in tagsViewStore.visitedViews" ref="tags" :key="tag.path" class="flex-shrink-0" size="small" :secondary="!isActive(tag)" type="primary" @click="handleToView(tag)" @contextmenu="handleContextMenu($event, tag)">
           {{ tag.title }}
           <n-button v-if="!tag.affix" quaternary circle size="tiny" class="ml-1" @click.stop="handleDelView(tag)">
             <n-icon>
