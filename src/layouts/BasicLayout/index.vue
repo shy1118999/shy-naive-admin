@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 17:27:12
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 16:39:25
+ * @LastEditTime: 2022-08-27 21:31:24
  * @Description: Basic Layout
 -->
 <script setup lang="ts">
@@ -25,5 +25,6 @@ const isMobile = useLayout().isMobile
       <!-- content -->
       <LayoutContent />
     </n-layout>
+    <n-back-top />
   </n-layout>
 </template>
