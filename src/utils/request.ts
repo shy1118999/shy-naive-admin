@@ -2,12 +2,12 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 10:46:59
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:21:36
+ * @LastEditTime: 2022-08-28 13:49:18
  * @Description: request
  */
 import axios from 'axios'
 // const host = '/' // 如果是mock模式 就不配置host 会走本地Mock拦截
-const host = 'http://192.168.0.110:7474/' // 如果是mock模式 就不配置host 会走本地Mock拦截
+const host = 'http://127.0.0.1:4523/m1/1521277-0-default/' // 如果是mock模式 就不配置host 会走本地Mock拦截
 
 const instance = axios.create({
   baseURL: host,

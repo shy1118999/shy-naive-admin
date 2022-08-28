@@ -2,10 +2,10 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 11:01:01
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-19 11:01:45
+ * @LastEditTime: 2022-08-28 13:50:53
  * @Description: apis
  */
-const url = '/api/v1'
+const url = ''
 
 const path = {
   test: '/test/test',
@@ -13,13 +13,13 @@ const path = {
    * 登录相关接口
    */
   // 登录
-  login: '/login/web',
-  logout: 'logout/web',
+  login: '/login',
+  // logout: 'logout/web',
   /**
    * 用户相关API
    */
   // 根据Token获取用户信息
-  getUserInfo: '/user/get_info',
+  getUserInfo: '/user/info',
 }
 type ApiKeys = keyof typeof path
 
