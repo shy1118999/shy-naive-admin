@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 17:23:41
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-25 09:39:16
+ * @LastEditTime: 2022-09-03 21:08:10
  * @Description: constant
  */
 import { BasicLayout } from '~/layouts'
@@ -43,6 +43,14 @@ const routes: RouteRecord[] = [
     // meta: { title: '表单', icon: 'dingdan' },
     children: [
       { path: '/form/basic', name: 'FormBasic', component: () => import('~/pages/form/basic.vue'), meta: { title: '基础表单', icon: 'dingdan' } },
+    ],
+  },
+  {
+    path: '/icon',
+    name: 'Icon',
+    component: BasicLayout,
+    children: [
+      { path: '/icon/list', name: 'IconList', component: () => import('~/pages/icon/list.vue'), meta: { title: 'Icon', icon: 'dingdan' } },
     ],
   },
   {

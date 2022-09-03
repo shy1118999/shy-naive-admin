@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-29 20:22:30
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-09-03 19:27:36
+ * @LastEditTime: 2022-09-03 20:59:54
  * @Description:
  */
 import * as XLSX from 'xlsx'
@@ -49,7 +49,7 @@ export function parseExcel(file: File, options?: XLSX.Sheet2JSONOpts) {
   })
 }
 
-export function parseExcelToTable(file: File) {
+export function parseExcelToTable(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
     reader.onload = (e) => {
