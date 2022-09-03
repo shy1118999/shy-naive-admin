@@ -11,4 +11,8 @@
 + [axios](https://github.com/axios/axios)  
 + [UnoCSS](https://github.com/unocss/unocss)  
 
+## Mock
+
+> apifox中导入mock/mock.apifox.json
+
 
