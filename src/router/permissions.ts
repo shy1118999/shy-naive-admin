@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 16:02:49
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-25 10:49:21
+ * @LastEditTime: 2022-09-03 21:49:56
  * @Description: permissions
  */
 import type { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
@@ -10,7 +10,7 @@ import router from './index'
 import { getToken } from '~/utils/auth' // get token from cookie
 import { useUserStore } from '~/store' // no redirect whitelist
 import settings from '~/settings'
-const whiteList = ['/login', '/401', '/404']
+const whiteList = ['/login', '/403', '/404']
 // 路由守卫
 router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
   $loadingBar.start()

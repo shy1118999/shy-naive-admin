@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 17:23:41
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-09-03 21:08:10
+ * @LastEditTime: 2022-09-03 21:50:07
  * @Description: constant
  */
 import { BasicLayout } from '~/layouts'
@@ -75,9 +75,9 @@ const routes: RouteRecord[] = [
     hidden: true,
   },
   {
-    path: '/401',
-    name: '401',
-    component: () => import ('~/pages/errorPage/401.vue'),
+    path: '/403',
+    name: '403',
+    component: () => import ('~/pages/errorPage/403.vue'),
     hidden: true,
   },
 ]
