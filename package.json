@@ -18,15 +18,18 @@
     "@vueuse/core": "^9.1.1",
     "axios": "^0.27.2",
     "echarts": "^5.3.3",
+    "file-saver": "^2.0.5",
     "naive-ui": "^2.32.2",
     "pinia": "^2.0.20",
     "screenfull": "^6.0.2",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.4"
+    "vue-router": "^4.1.4",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.7",
     "@shy1118/eslint-config": "^1.0.4",
+    "@types/file-saver": "^2.0.5",
     "@types/node": "^18.7.13",
     "@unocss/reset": "^0.45.12",
     "@vicons/carbon": "^0.12.0",
