@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 17:47:22
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 16:40:41
+ * @LastEditTime: 2023-01-04 17:06:13
  * @Description: LayoutAside
 -->
 <script setup lang="ts">
@@ -29,6 +29,8 @@ function handleUpdateMenu(_key: string, item: MenuOption) {
 const route = useRoute()
 
 function renderMenuIcon(options: MenuOption) {
+  if (!options.iconName)
+    return null
   return h(SvgIcon, { name: options.iconName as string ?? 'dingdan' })
 }
 </script>
