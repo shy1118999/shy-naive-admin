@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 17:23:41
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 08:55:59
+ * @LastEditTime: 2023-01-30 16:18:22
  * @Description: constant
  */
 import { BasicLayout } from '~/layouts'
@@ -23,6 +23,19 @@ const routes: RouteRecord[] = [
       { path: '/dashboard', name: 'DashboardIndex', component: () => import('~/pages/dashboard/index.vue'), meta: { title: '主页', affix: true, icon: 'shouye', breadcrumb: false } },
       { path: '/dashboard/workbench', name: 'DashboardWorkbench', component: () => import('~/pages/dashboard/workbench.vue'), meta: { title: '工作台', icon: 'jiance', keepAlive: true } },
       { path: '/dashboard/analysis', name: 'DashboardAnalysis', component: () => import('~/pages/dashboard/analysis.vue'), meta: { title: '分析页', icon: 'xiangce' } },
+    ],
+  },
+  {
+    path: '/guide',
+    component: BasicLayout,
+    name: 'Guide',
+    redirect: '/guide/index',
+    meta: {
+      title: '引导页',
+      icon: 'fenxiang 2',
+    },
+    children: [
+      { path: '/guide/index', name: '引导页', component: () => import('~/pages/guide/index.vue'), meta: { title: '引导页', icon: 'fenxiang 2' } },
     ],
   },
   {

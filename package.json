@@ -17,6 +17,7 @@
   "dependencies": {
     "@vueuse/core": "^9.11.1",
     "axios": "^0.27.2",
+    "driver.js": "^0.9.8",
     "echarts": "^5.4.1",
     "file-saver": "^2.0.5",
     "naive-ui": "^2.34.3",

@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 17:37:38
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-10-10 14:50:10
+ * @LastEditTime: 2023-01-30 17:27:46
  * @Description: Layout Header
 -->
 <script setup lang="ts">
@@ -22,7 +22,7 @@ const isMobile = useLayout().isMobile
 </script>
 
 <template>
-  <n-layout-header class="flex justify-between px-5 items-center h-60px fixed z-10 left-0 top-0 right-0 header  border-b border-gray-300/50">
+  <n-layout-header class="flex justify-between px-5 items-center h-60px absolute z-10 left-0 top-0 right-0 header  border-b border-gray-300/50">
     <div class="flex justify-center items-center">
       <!-- icon -->
       <!-- title -->
@@ -35,9 +35,9 @@ const isMobile = useLayout().isMobile
     <div class="flex justify-center items-center children-mx-1">
       <!-- search -->
       <!-- fullscreen -->
-      <MenuScreenfull />
+      <MenuScreenfull id="screenfull" />
       <!-- light/dark -->
-      <MenuLightDark />
+      <MenuLightDark id="darkswitch" />
       <!-- user info -->
       <MenuUserInfo />
     </div>

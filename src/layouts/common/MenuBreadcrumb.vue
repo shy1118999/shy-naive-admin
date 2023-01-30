@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 19:12:49
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 15:40:00
+ * @LastEditTime: 2023-01-30 16:22:46
  * @Description: menu breadcrumb
 -->
 <script setup lang="ts">
@@ -34,7 +34,7 @@ function isDashboard(route: RouteLocationMatched) {
 </script>
 
 <template>
-  <n-breadcrumb>
+  <n-breadcrumb id="breadcrumb-container">
     <n-breadcrumb-item v-for="(item,) in levelList" :key="item.path">
       <span>{{ item.meta?.title }}</span>
     </n-breadcrumb-item>

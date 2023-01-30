@@ -17,6 +17,7 @@ specifiers:
   '@vueuse/core': ^9.11.1
   axios: ^0.27.2
   cross-env: ^7.0.3
+  driver.js: ^0.9.8
   echarts: ^5.4.1
   eslint: ^8.33.0
   file-saver: ^2.0.5
@@ -42,6 +43,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 9.11.1_vue@3.2.45
   axios: 0.27.2
+  driver.js: 0.9.8
   echarts: 5.4.1
   file-saver: 2.0.5
   naive-ui: 2.34.3_vue@3.2.45
@@ -2420,6 +2422,10 @@ packages:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
     dev: true
+
+  /driver.js/0.9.8:
+    resolution: {integrity: sha512-bczjyKdX6XmFyCDkwtRmlaORDwfBk1xXmRO0CAe5VwNQTM98aWaG2LAIiIdTe53iV/B7W5lXlIy2xYtf0JRb7Q==}
+    dev: false
 
   /duplexer/0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}

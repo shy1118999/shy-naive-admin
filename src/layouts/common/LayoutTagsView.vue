@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-23 20:07:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-25 09:38:19
+ * @LastEditTime: 2023-01-30 16:24:14
  * @Description: LayoutTagsView
 -->
 <script setup lang="ts">
@@ -109,7 +109,7 @@ function handleScroll() {
 </script>
 
 <template>
-  <div class="h-40px fixed top-60px right-0 left-240px shadow z-9 bg" :style="{ left: isMobile ? '0px' : appStore.sidebar.opened ? '64px' : '240px', boxShadow: themeVars.boxShadow1 }">
+  <div id="tags-view-container" class="h-40px fixed top-60px right-0 left-240px shadow z-9 bg" :style="{ left: isMobile ? '0px' : appStore.sidebar.opened ? '64px' : '240px', boxShadow: themeVars.boxShadow1 }">
     <n-scrollbar ref="scrollContainer" x-scrollable>
       <div class="flex flex-row h-40px items-center px-2 gap-2 justify-start">
         <n-button v-for="tag in tagsViewStore.visitedViews" ref="tags" :key="tag.path" class="flex-shrink-0" size="small" :secondary="!isActive(tag)" type="primary" @click="handleToView(tag)" @contextmenu="handleContextMenu($event, tag)">
