@@ -2,39 +2,18 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-28 20:52:43
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-09-03 19:22:00
+ * @LastEditTime: 2023-01-30 09:54:33
  * @Description: xlsx export
  */
 import { saveAs } from 'file-saver'
 import * as XLSX from 'xlsx'
 import type { WorkBook, WorkSheet } from 'xlsx'
 import { decodeCell, decodeRange, encodeRange } from './utils'
-import articles from '~/articles.json'
 
 interface HeaderProps {
   key: string
   title: string
   formatter?: (v: string | number) => string
-}
-
-export function test() {
-  exportToExcel({
-    sheets: [
-      {
-        header: [
-          { key: 'id', title: 'ID' },
-          { key: 'author', title: '作者' },
-          { key: 'title', title: '标题' },
-          { key: 'pageviews', title: '浏览数' },
-          { key: 'timestamp', title: '发布时间', formatter: (v: string | number) => (new Date(v)).toDateString() },
-        ],
-        multiHeader: [['This is Title']],
-        data: articles,
-        merges: ['A1:E1'],
-        autoWidth: true,
-      },
-    ],
-  })
 }
 
 type ExcelType = 'xlsx' | 'xls'

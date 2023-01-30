@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 11:07:54
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 19:28:56
+ * @LastEditTime: 2023-01-30 09:15:21
  * @Description: RoleSwitch
 -->
 <script setup lang="ts">
@@ -17,7 +17,7 @@ function handleChange(value: unknown[]) {
 </script>
 
 <template>
-  <div>
+  <div class="p-3">
     切换角色
     <n-checkbox-group :value="userStore.roles" @update:value="handleChange">
       <n-space item-style="display: flex;">

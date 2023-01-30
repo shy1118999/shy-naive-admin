@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 10:46:17
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:52:48
+ * @LastEditTime: 2023-01-30 09:11:51
  * @Description: user store
  */
 import { defineStore } from 'pinia'
@@ -19,7 +19,7 @@ import { getConstantRouteNames } from '~/router/helpers'
 export const useUserStore = defineStore('user-store', () => {
   const token = ref(getToken())
   const userInfo = ref<UserInfo | null>(null)
-  const roles = computed(() => userInfo.value?.roles || [])
+  const roles = computed(() => Array.from(new Set(userInfo.value?.roles || [])))
 
   function loadToken(t: string) {
     setToken(t)

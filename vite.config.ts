@@ -4,6 +4,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
@@ -23,6 +24,7 @@ export default defineConfig({
     Vue({
       reactivityTransform: true,
     }),
+    vueJsx(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
