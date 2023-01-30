@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "msg": "ok",
+  "data": {
+    "avatar": "https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg",
+    "nickname": "满脑的思绪",
+    "roles": [
+      "admin",
+      "user"
+    ]
+  }
+}

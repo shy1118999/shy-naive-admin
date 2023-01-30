@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 10:46:17
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 09:11:51
+ * @LastEditTime: 2023-01-30 18:16:37
  * @Description: user store
  */
 import { defineStore } from 'pinia'
@@ -28,7 +28,7 @@ export const useUserStore = defineStore('user-store', () => {
 
   function login(account: string, pwd: string) {
     return new Promise((resolve, reject) => {
-      request.post(api.login, { account, pwd }).then((response) => {
+      request.get(api.login, { account, pwd }).then((response) => {
         const { data } = response
         token.value = data.token
         setToken(data.token)

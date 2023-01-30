@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 14:00:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 18:05:49
+ * @LastEditTime: 2023-01-30 18:07:47
  * @Description: dashboard workbench page
 -->
 <script setup lang="ts">
@@ -56,7 +56,7 @@ function handleTo(path: string) {
                   <svg-icon :name="item.icon" class="text-30px mr-3" />
                   {{ item.name }}
                 </h3>
-                <div class="flex justify-end text-sm pt-12px pr-5">
+                <div class="flex justify-end text-sm pt-12px pr-5 text-right">
                   {{ item.desc }}
                 </div>
               </div>
