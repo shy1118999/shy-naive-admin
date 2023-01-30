@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 14:00:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 15:51:53
+ * @LastEditTime: 2023-01-30 18:05:49
  * @Description: dashboard workbench page
 -->
 <script setup lang="ts">
@@ -51,7 +51,7 @@ function handleTo(path: string) {
         <n-card title="主要技术栈">
           <n-grid cols="s:1 m:2 l:4" responsive="screen" :x-gap="16" :y-gap="16">
             <n-grid-item v-for="item, idx in technologyStack" :key="idx">
-              <div class="shadow rounded-xl p-3">
+              <div class="shadow rounded-xl p-3 shadow-gray-500/50">
                 <h3 class="text-16px flex items-center">
                   <svg-icon :name="item.icon" class="text-30px mr-3" />
                   {{ item.name }}
@@ -67,7 +67,7 @@ function handleTo(path: string) {
       <n-grid-item span="0:24 640:24 1024:8">
         <n-card title="快捷操作">
           <div class="flex flex-wrap">
-            <div v-for="item, idx in shortcuts" :key="idx" class="shadow rounded-xl m-2 p-3 w-25 h-25 flex items-center justify-center flex-col cursor-pointer" @click="handleTo(item.path)">
+            <div v-for="item, idx in shortcuts" :key="idx" class="shadow shadow-gray-500/50 rounded-xl m-2 p-3 w-25 h-25 flex items-center justify-center flex-col cursor-pointer" @click="handleTo(item.path)">
               <svg-icon :name="item.icon" :size="40" />
               <p class="text-lg text-center">
                 {{ item.name }}
