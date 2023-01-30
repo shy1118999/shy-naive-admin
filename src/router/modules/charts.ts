@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 11:03:18
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-25 09:41:03
+ * @LastEditTime: 2023-01-30 08:58:22
  * @Description: admin router
  */
 import type { RouteRecord } from '~/typings/route'
@@ -15,6 +15,7 @@ const routes: RouteRecord[] = [
     component: BasicLayout,
     meta: {
       title: '图表',
+      icon: 'tongji',
     },
     children: [
       {
@@ -23,6 +24,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/charts/line.vue'),
         meta: {
           title: '折线图',
+          icon: 'zoushi1',
         },
       },
       {
@@ -31,6 +33,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/charts/nightingale.vue'),
         meta: {
           title: '南丁格尔玫瑰图',
+          icon: 'gaishuai',
         },
       },
       {
@@ -39,6 +42,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/charts/area.vue'),
         meta: {
           title: '堆叠图',
+          icon: 'shoucang1',
         },
       },
       {
@@ -47,6 +51,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/charts/clock.vue'),
         meta: {
           title: '时钟仪表盘',
+          icon: 'shijian',
           keepAlive: true,
         },
       },

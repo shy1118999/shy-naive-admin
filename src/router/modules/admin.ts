@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 11:03:18
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 14:50:24
+ * @LastEditTime: 2023-01-30 08:59:07
  * @Description: admin router
  */
 import type { RouteRecord } from '~/typings/route'
@@ -24,6 +24,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/admin/data.vue'),
         meta: {
           title: '数据管理',
+          icon: 'baogao',
         },
       },
     ],

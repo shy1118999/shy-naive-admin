@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 17:23:41
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-09-03 21:50:07
+ * @LastEditTime: 2023-01-30 08:55:59
  * @Description: constant
  */
 import { BasicLayout } from '~/layouts'
@@ -21,19 +21,19 @@ const routes: RouteRecord[] = [
     children: [
       { path: '/profile', name: 'Profile', component: () => import('~/pages/user/profile.vue'), hidden: true, meta: { title: '个人中心' } },
       { path: '/dashboard', name: 'DashboardIndex', component: () => import('~/pages/dashboard/index.vue'), meta: { title: '主页', affix: true, icon: 'shouye', breadcrumb: false } },
-      { path: '/dashboard/workbench', name: 'DashboardWorkbench', component: () => import('~/pages/dashboard/workbench.vue'), meta: { title: '工作台', icon: 'dingdan', keepAlive: true } },
-      { path: '/dashboard/analysis', name: 'DashboardAnalysis', component: () => import('~/pages/dashboard/analysis.vue'), meta: { title: '分析页', icon: 'dingdan' } },
+      { path: '/dashboard/workbench', name: 'DashboardWorkbench', component: () => import('~/pages/dashboard/workbench.vue'), meta: { title: '工作台', icon: 'jiance', keepAlive: true } },
+      { path: '/dashboard/analysis', name: 'DashboardAnalysis', component: () => import('~/pages/dashboard/analysis.vue'), meta: { title: '分析页', icon: 'xiangce' } },
     ],
   },
   {
     path: '/component',
     name: 'Component',
     component: BasicLayout,
-    meta: { title: '组件', icon: 'dingdan' },
+    meta: { title: '组件', icon: 'gengduo' },
     children: [
-      { path: '/component/button', name: 'ComponentButton', component: () => import('~/pages/component/button.vue'), meta: { title: '按钮', icon: 'dingdan' } },
-      { path: '/component/card', name: 'ComponentCard', component: () => import('~/pages/component/card.vue'), meta: { title: '卡片', icon: 'dingdan' } },
-      { path: '/component/table', name: 'ComponentTable', component: () => import('~/pages/component/table.vue'), meta: { title: '表格', icon: 'dingdan' } },
+      { path: '/component/button', name: 'ComponentButton', component: () => import('~/pages/component/button.vue'), meta: { title: '按钮', icon: 'xihuan' } },
+      { path: '/component/card', name: 'ComponentCard', component: () => import('~/pages/component/card.vue'), meta: { title: '卡片', icon: 'renwu1' } },
+      { path: '/component/table', name: 'ComponentTable', component: () => import('~/pages/component/table.vue'), meta: { title: '表格', icon: 'caidan' } },
     ],
   },
   {
@@ -42,7 +42,7 @@ const routes: RouteRecord[] = [
     component: BasicLayout,
     // meta: { title: '表单', icon: 'dingdan' },
     children: [
-      { path: '/form/basic', name: 'FormBasic', component: () => import('~/pages/form/basic.vue'), meta: { title: '基础表单', icon: 'dingdan' } },
+      { path: '/form/basic', name: 'FormBasic', component: () => import('~/pages/form/basic.vue'), meta: { title: '基础表单', icon: 'gongzimingxi' } },
     ],
   },
   {
@@ -50,7 +50,7 @@ const routes: RouteRecord[] = [
     name: 'Icon',
     component: BasicLayout,
     children: [
-      { path: '/icon/list', name: 'IconList', component: () => import('~/pages/icon/list.vue'), meta: { title: 'Icon', icon: 'dingdan' } },
+      { path: '/icon/list', name: 'IconList', component: () => import('~/pages/icon/list.vue'), meta: { title: 'Icon', icon: 'dianzan' } },
     ],
   },
   {

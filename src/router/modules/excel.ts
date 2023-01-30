@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-22 11:03:18
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-28 14:18:53
+ * @LastEditTime: 2023-01-30 09:04:41
  * @Description: admin router
  */
 import type { RouteRecord } from '~/typings/route'
@@ -16,6 +16,7 @@ const routes: RouteRecord[] = [
     redirect: '/excel/export-excel',
     meta: {
       title: 'Excel',
+      icon: 'zixun1',
     },
     children: [
       {
@@ -24,6 +25,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/excel/export-excel.vue'),
         meta: {
           title: '导出至Excel',
+          icon: 'xiazai',
         },
       },
       {
@@ -32,6 +34,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/excel/export-selected-excel.vue'),
         meta: {
           title: '导出选中项',
+          icon: 'xiazaiwenjian',
         },
       },
       {
@@ -40,6 +43,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/excel/export-merge-header.vue'),
         meta: {
           title: '合并表头',
+          icon: 'shounahe',
         },
       },
       {
@@ -48,6 +52,7 @@ const routes: RouteRecord[] = [
         component: () => import('~/pages/excel/upload-excel.vue'),
         meta: {
           title: '上传Excel',
+          icon: 'shangchuan',
         },
       },
     ],
