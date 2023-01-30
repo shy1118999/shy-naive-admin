@@ -40,7 +40,6 @@ specifiers:
   xlsx: ^0.18.5
 
 dependencies:
-  '@iconify/vue': 4.1.0_vue@3.2.45
   '@vueuse/core': 9.11.1_vue@3.2.45
   axios: 0.27.2
   echarts: 5.4.1
@@ -54,6 +53,7 @@ dependencies:
 
 devDependencies:
   '@iconify-json/carbon': 1.1.14
+  '@iconify/vue': 4.1.0_vue@3.2.45
   '@shy1118/eslint-config': 1.0.5_zkdaqh7it7uc4cvz2haft7rc6u
   '@types/file-saver': 2.0.5
   '@types/node': 18.11.18
@@ -676,6 +676,7 @@ packages:
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
 
   /@iconify/utils/2.1.0:
     resolution: {integrity: sha512-ouXv1hQfOKq4k3wxQ2OJBYQ2gXBMeFoUCIiORmuUVUNlSq9oOTzQBF3jpFRb0+/P0bnV+RIoHcbZKufZTlJ16g==}
@@ -697,7 +698,7 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
       vue: 3.2.45
-    dev: false
+    dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
