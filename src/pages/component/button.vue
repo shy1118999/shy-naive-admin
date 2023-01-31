@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 14:02:28
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 09:26:08
+ * @LastEditTime: 2023-01-31 15:12:51
  * @Description: component button page
 -->
 <script setup lang="ts">
@@ -361,11 +361,11 @@ const buttonExample: ButtonExample[] = [
         props: {
           text: true,
           tag: 'a',
-          href: 'https://github.com/honghuangdc/soybean-admin',
+          href: 'https://github.com/shy1118999/shy-naive-admin',
           target: '_blank',
           type: 'primary',
         },
-        label: 'soybean-admin',
+        label: 'shy-naive-admin',
       },
     ],
     desc: '你可以把按钮渲染成不同的标签，比如 a标签 。',
