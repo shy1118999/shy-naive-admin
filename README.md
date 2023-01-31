@@ -34,8 +34,7 @@
 ![工作台](https://s2.loli.net/2023/01/30/gT7XP3HdZW84ciJ.png)
 ![分析页](https://s2.loli.net/2023/01/30/MDHGc3Iwu8xONfV.png)
 ![分析页-夜间](https://s2.loli.net/2023/01/30/3lrHuWRN5ditQ7Z.png)
-![按钮-夜间](https://s2.loli.net/2023/01/30/zcuAprdfQisxJFD.png)
-
+![按钮-夜间](https://s2.loli.net/2023/01/31/oS142kmwsMXKdCQ.png)
 ## Mock
 
 > apifox中导入mock/mock.apifox.json
