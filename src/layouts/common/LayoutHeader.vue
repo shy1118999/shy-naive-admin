@@ -2,11 +2,10 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 17:37:38
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 17:27:46
+ * @LastEditTime: 2023-01-31 16:03:49
  * @Description: Layout Header
 -->
 <script setup lang="ts">
-import { useThemeVars } from 'naive-ui'
 import MenuSwitch from './MenuSwitch.vue'
 import MenuBreadcrumb from './MenuBreadcrumb.vue'
 import MenuLogo from './MenuLogo.vue'

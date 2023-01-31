@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-09-03 21:02:13
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-31 16:01:26
+ * @LastEditTime: 2023-01-31 16:04:39
  * @Description: icon list
 -->
 <script setup lang="ts">
@@ -38,8 +38,8 @@ watchEffect(() => {
 
     <div class="flex flex-wrap">
       <div v-for="icon in iconNames" :key="icon" class="w-25 h-25 cursor-pointer flex flex-col items-center justify-center">
-        <SvgIcon :size="40" :name="icon" @click="handleCopy(icon, 'icon')" />
-        <span @click="handleCopy(icon)">{{ icon }}</span>
+        <SvgIcon :size="40" :name="icon!" @click="handleCopy(icon!, 'icon')" />
+        <span @click="handleCopy(icon!)">{{ icon }}</span>
       </div>
     </div>
   </div>

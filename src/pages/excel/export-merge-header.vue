@@ -2,32 +2,15 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-28 14:16:16
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 10:55:45
+ * @LastEditTime: 2023-01-31 16:11:23
  * @Description: export excel
 -->
 <script setup lang="ts">
+import type { TableColumns } from 'naive-ui/es/data-table/src/interface'
 import { exportToExcel } from '~/utils/xlsx/export'
 import articles from '~/articles.json'
 
-interface ArticleItem {
-  id: number
-  timestamp: number
-  author: string
-  reviewer: string
-  title: string
-  content_short: string
-  content: string
-  forecast: number
-  importance: number
-  type: string
-  status: string
-  display_name: string
-  comment_disabled: boolean
-  pageviews: number
-  image_uri: string
-  platforms: string[]
-}
-const columns = [
+const columns: TableColumns = [
   {
     title: 'ID',
     key: 'id',
@@ -53,7 +36,7 @@ const columns = [
   {
     title: '发布时间',
     key: 'timestamp',
-    render(row: ArticleItem) {
+    render(row: any) {
       return (new Date(row.timestamp)).toDateString()
     },
   },

@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 14:00:16
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 14:48:38
+ * @LastEditTime: 2023-01-31 16:04:03
  * @Description: dashboard analysis page
 -->
 <script setup lang="ts">
@@ -34,7 +34,7 @@ const columns = [
   {
     title: '发布时间',
     key: 'timestamp',
-    render(row: ArticleItem) {
+    render(row: any) {
       return (new Date(row.timestamp)).toDateString()
     },
   },

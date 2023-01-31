@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-23 20:07:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 17:35:39
+ * @LastEditTime: 2023-01-31 16:04:24
  * @Description: LayoutTagsView
 -->
 <script setup lang="ts">
@@ -52,8 +52,6 @@ function handleDelView(view: TagView) {
   }
   tagsViewStore.delView(view)
 }
-const appStore = useAppStore()
-const isMobile = useLayout().isMobile
 const themeVars = useThemeVars()
 
 const x = ref(0)
