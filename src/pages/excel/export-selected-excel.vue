@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-28 14:16:16
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 10:43:46
+ * @LastEditTime: 2023-04-06 09:51:18
  * @Description: export excel
 -->
 <script setup lang="ts">
@@ -80,6 +80,6 @@ function handleCheck(rowKeys: DataTableRowKey[]) {
     <submit-modal title="请输入Excel文件名" :loading="false" :show="modalShow" @submit="handleExport" @cancel="modalShow = false">
       <n-input v-model:value="filename" placeholder="请输入人Excel文件名" />
     </submit-modal>
-    <n-data-table :data="articles" :columns="columns" :row-key="row => row.id" @update:checked-row-keys="handleCheck" />
+    <n-data-table :data="articles" :columns="columns" :row-key="(row: any) => row.id" @update:checked-row-keys="handleCheck" />
   </div>
 </template>

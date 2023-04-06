@@ -2,11 +2,11 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 17:47:22
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 17:30:47
+ * @LastEditTime: 2023-04-06 09:52:59
  * @Description: LayoutAside
 -->
 <script setup lang="ts">
-import { MenuOption } from 'naive-ui'
+import type { MenuOption } from 'naive-ui'
 import SvgIcon from '~/components/SvgIcon.vue'
 import { usePermissionStore } from '~/store'
 

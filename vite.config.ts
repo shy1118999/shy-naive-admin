@@ -21,15 +21,12 @@ export default defineConfig({
   },
   plugins: [
     transformIndexWithEnv({ ...settings }),
-    Vue({
-      reactivityTransform: true,
-    }),
+    Vue(),
     vueJsx(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
-        'vue/macros',
         'vue-router',
         '@vueuse/core',
         {
