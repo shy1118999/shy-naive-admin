@@ -56,6 +56,7 @@ const routes: RouteRecord[] = [
     // meta: { title: '表单', icon: 'dingdan' },
     children: [
       { path: '/form/basic', name: 'FormBasic', component: () => import('~/pages/form/basic.vue'), meta: { title: '基础表单', icon: 'gongzimingxi' } },
+      { path: '/form/edit', name: 'FormEdit', component: () => import('~/pages/form/edit.vue'), hidden: true, meta: { title: '编辑', icon: 'gongzimingxi' } },
     ],
   },
   {
