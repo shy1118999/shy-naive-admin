@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2023-04-12 09:29:22
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-05-13 15:20:01
+ * @LastEditTime: 2023-05-13 15:23:02
  * @Description: article store
  */
 import { defineStore } from 'pinia'
@@ -210,7 +210,6 @@ export const useArticleStore = defineStore('article-store', {
           ...this.list[index],
           ...data,
         }
-        console.log(this.list[index])
         resolve(true)
       })
     },
