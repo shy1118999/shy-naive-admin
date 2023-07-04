@@ -2,7 +2,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-11 11:04:24
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-23 21:24:58
+ * @LastEditTime: 2023-07-04 10:21:00
  * @Description:
  */
 import {
@@ -14,6 +14,7 @@ import {
   // transformerDirectives,
   // transformerVariantGroup,
 } from 'unocss'
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
   shortcuts: [
@@ -27,6 +28,18 @@ export default defineConfig({
     presetIcons({
       scale: 1.2,
       warn: true,
+      collections: {
+        custom: FileSystemIconLoader(
+          './src/icons',
+          // 将fill属性转换为currentColor
+          svg => svg.replace(/fill="[^"]*"/g, 'fill="currentColor"'),
+        ),
+        colorful: FileSystemIconLoader(
+          './src/icons/colorful',
+          // 将fill属性转换为currentColor
+          svg => svg,
+        ),
+      },
     }),
     presetWebFonts({
       fonts: {

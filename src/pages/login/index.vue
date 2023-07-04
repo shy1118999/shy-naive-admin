@@ -2,13 +2,11 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-19 09:05:03
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:56:28
+ * @LastEditTime: 2023-07-04 10:15:55
  * @Description: login
 -->
 <script setup lang="ts">
 import type { FormInst, FormRules } from 'naive-ui'
-import { Password, UserAdmin } from '@vicons/carbon'
-import { Eye20Regular, EyeOff20Regular } from '@vicons/fluent'
 import { useUserStore } from '~/store'
 const INITIAL_DATA = {
   account: '',
@@ -65,20 +63,17 @@ async function handleLogin() {
         <n-form-item path="account">
           <n-input v-model:value="formData.account" size="large" placeholder="请输入账号">
             <template #prefix>
-              <n-icon :component="UserAdmin" />
+              <div class="i-carbon:user-admin" />
             </template>
           </n-input>
         </n-form-item>
         <n-form-item path="password">
           <n-input v-model:value="formData.password" size="large" :type="showPwd ? 'text' : 'password'" placeholder="请输入密码" @keydown.enter="handleLogin">
             <template #prefix>
-              <n-icon :component="Password" />
+              <div class="i-carbon:password" />
             </template>
             <template #suffix>
-              <n-icon
-                :component="showPwd ? Eye20Regular : EyeOff20Regular" class="cursor-pointer"
-                @click="showPwd = !showPwd"
-              />
+              <div :class="{ 'i-carbon:view-off': !showPwd, 'i-carbon:view': showPwd }" class="cursor-pointer" @click="showPwd = !showPwd" />
             </template>
           </n-input>
         </n-form-item>

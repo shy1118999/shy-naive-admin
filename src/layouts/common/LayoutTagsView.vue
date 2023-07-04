@@ -2,11 +2,10 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-23 20:07:48
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-31 16:04:24
+ * @LastEditTime: 2023-07-04 13:41:58
  * @Description: LayoutTagsView
 -->
 <script setup lang="ts">
-import { Close } from '@vicons/carbon'
 import { useThemeVars } from 'naive-ui'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
 import type { TagView } from '~/typings/route'
@@ -114,7 +113,7 @@ function handleScroll() {
           {{ tag.title }}
           <n-button v-if="!tag.affix" quaternary circle size="tiny" class="ml-1" @click.stop="handleDelView(tag)">
             <n-icon>
-              <Close />
+              <div class="i-carbon:close w-full h-full" />
             </n-icon>
           </n-button>
         </n-button>

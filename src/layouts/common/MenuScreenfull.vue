@@ -2,12 +2,11 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-18 19:50:52
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-18 20:02:03
+ * @LastEditTime: 2023-07-04 13:38:23
  * @Description: Menu Screenfull
 -->
 <script setup lang="ts">
 import screenfull from 'screenfull'
-import { FullscreenExitRound, FullscreenRound } from '@vicons/material'
 const isFullscreen = ref(false)
 screenfull.on('change', change)
 function change() {
@@ -17,7 +16,7 @@ function change() {
 
 <template>
   <n-icon size="30" @click="screenfull.toggle()">
-    <FullscreenExitRound v-if="isFullscreen" />
-    <FullscreenRound v-else />
+    <div v-if="isFullscreen" class="i-custom-fullscreen-exit w-full h-full" />
+    <div v-else class="i-custom-fullscreen w-full h-full" />
   </n-icon>
 </template>

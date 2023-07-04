@@ -2,11 +2,10 @@
  * @Author: shaohang-shy
  * @Date: 2022-08-29 18:38:46
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-29 18:44:05
+ * @LastEditTime: 2023-07-04 10:21:42
  * @Description: ShyUpload
 -->
 <script setup lang="ts">
-import { DriveFolderUploadRound as ArchiveIcon } from '@vicons/material'
 import type { UploadFileInfo } from 'naive-ui'
 const props = defineProps<{
   accept: string
@@ -29,7 +28,7 @@ function handleUpload({ file }: { file: UploadFileInfo }) {
     <n-upload-dragger>
       <div class="m-3">
         <n-icon size="48" :depth="3">
-          <ArchiveIcon />
+          <div class="w-full h-full text-gray i-custom-folder-upload" />
         </n-icon>
       </div>
       <n-text v-if="tips" class="text-sm">
