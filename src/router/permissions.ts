@@ -7,8 +7,13 @@
  */
 import type { NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
 import router from './index'
-import { getToken } from '~/utils/auth' // get token from cookie
-import { useUserStore } from '~/store' // no redirect whitelist
+
+import { getToken } from '~/utils/auth'
+
+// get token from cookie
+import { useUserStore } from '~/store'
+
+// no redirect whitelist
 import settings from '~/settings'
 const whiteList = ['/login', '/403', '/404']
 // 路由守卫
@@ -51,7 +56,7 @@ router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormali
     // 如果有token则setToken 然后next
     if (query.token) {
       userState.loadToken(query.token as unknown as string)
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // eslint-disable-next-line ts/ban-ts-comment
       // @ts-expect-error
       to.query.token = undefined
       next({ ...to, replace: true })

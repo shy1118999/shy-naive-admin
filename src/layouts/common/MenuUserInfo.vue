@@ -1,8 +1,8 @@
 <!--
  * @Author: shaohang-shy
  * @Date: 2022-08-18 20:09:18
- * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-22 18:53:45
+ * @LastEditors: shy1118
+ * @LastEditTime: 2023-11-19 14:19:39
  * @Description: MenuUserInfo
 -->
 <script setup lang="ts">
@@ -26,8 +26,12 @@ const avatar = computed(() => {
 })
 const router = useRouter()
 async function handleSelect(key: string) {
-  if (key === 'profile') { router.push({ path: '/profile' }) }
-  else if (key === 'toIndex') { router.push({ path: '/' }) }
+  if (key === 'profile') {
+    router.push({ path: '/profile' })
+  }
+  else if (key === 'toIndex') {
+    router.push({ path: '/' })
+  }
   else if (key === 'logout') {
     await userStore.logout()
     router.replace({ path: '/' })

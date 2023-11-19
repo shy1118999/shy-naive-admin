@@ -7,7 +7,7 @@
 -->
 
 <script setup lang="ts">
-import { type ECOption } from '~/composables'
+import type { ECOption } from '~/composables'
 
 const lineOptions = ref<ECOption>({
   series: [
@@ -203,7 +203,7 @@ const lineOptions = ref<ECOption>({
 let intervalId: NodeJS.Timer
 
 onUnmounted(() => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // eslint-disable-next-line ts/ban-ts-comment
   // @ts-expect-error
   clearInterval(intervalId)
 })
@@ -244,6 +244,6 @@ export default { name: 'ChartsClock' }
 
 <template>
   <div class="p-2">
-    <div ref="chartRef" w-full h-600px />
+    <div ref="chartRef" h-600px w-full />
   </div>
 </template>

@@ -23,7 +23,7 @@ const path = {
 }
 type ApiKeys = keyof typeof path
 
-const getApi = () => {
+function getApi() {
   const Api = {} as Record<ApiKeys, string>
   Object.keys(path).forEach((item) => {
     Api[item as ApiKeys] = `${url}${path[item as ApiKeys]}`

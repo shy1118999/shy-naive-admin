@@ -11,7 +11,7 @@ import { Icon } from '@iconify/vue'
 
 interface ButtonDetail {
   id: number
-  props: ButtonProps & { href?: string; target?: string }
+  props: ButtonProps & { href?: string, target?: string }
   label?: string
   icon?: string
 }

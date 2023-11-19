@@ -7,6 +7,7 @@
 -->
 <script setup lang="ts">
 import LayoutTagsView from './LayoutTagsView.vue'
+
 const appStore = useAppStore()
 const tagsViewStore = useTagsViewStore()
 </script>

@@ -8,6 +8,7 @@
 <script setup lang="ts">
 import type { FormInst, FormRules } from 'naive-ui'
 import { useUserStore } from '~/store'
+
 const INITIAL_DATA = {
   account: '',
   password: '',
@@ -47,15 +48,15 @@ async function handleLogin() {
 
 <template>
   <div
-    class="login-main fixed w-100vw h-100vh top-0 left-0 flex items-center md:justify-start lt-md:justify-center lt-md:p-10 md:p-20"
+    class="login-main fixed left-0 top-0 h-100vh w-100vw flex items-center md:justify-start lt-md:justify-center lt-md:p-10 md:p-20"
   >
     <div class="w-md">
       <!-- 登录面板 -->
       <div>
-        <h1 class="text-5xl text-light-900 leading-loose lt-md:text-3xl">
+        <h1 class="text-5xl leading-loose text-light-900 lt-md:text-3xl">
           登录到
         </h1>
-        <h1 class="text-5xl text-light-900 leading-loose lt-md:text-3xl">
+        <h1 class="text-5xl leading-loose text-light-900 lt-md:text-3xl">
           Vue Naive Admin
         </h1>
       </div>
@@ -83,7 +84,7 @@ async function handleLogin() {
           </n-button>
         </n-form-item>
       </n-form>
-      <div leading-normal text-sm color="gray-500/90">
+      <div text-sm leading-normal color="gray-500/90">
         Copyright @ 2022-{{ new Date().getFullYear() }} ShyNaiveAdmin. All Rights Reserved
       </div>
       <div class="h-30" />

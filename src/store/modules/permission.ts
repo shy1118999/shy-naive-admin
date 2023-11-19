@@ -1,8 +1,8 @@
 /*
  * @Author: shaohang-shy
  * @Date: 2022-08-19 11:21:41
- * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 11:24:10
+ * @LastEditors: shy1118
+ * @LastEditTime: 2023-11-19 14:11:39
  * @Description: permission store
  */
 import type { MenuOption } from 'naive-ui'
@@ -84,7 +84,7 @@ export const usePermissionStore = defineStore('permission-store', {
         const accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
         this.routes = constantRoutes.concat(accessedRoutes)
         this.addRoutes = accessedRoutes
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // eslint-disable-next-line ts/ban-ts-comment
         // @ts-expect-error
         this.menus = generateMenus(this.routes)
         resolve(accessedRoutes)

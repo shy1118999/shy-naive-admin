@@ -7,6 +7,7 @@
 -->
 <script setup lang="ts">
 import { parseExcelToTable } from '~/utils/xlsx/import'
+
 const html = ref('')
 function handleUpload(file: File) {
   parseExcelToTable(file).then((res) => {

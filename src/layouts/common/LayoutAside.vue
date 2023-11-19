@@ -38,7 +38,7 @@ function renderMenuIcon(options: MenuOption) {
 <template>
   <template v-if="!isMobile">
     <n-layout-sider
-      bordered class="absolute left-0 top-0 bottom-0 shadow z-9"
+      bordered class="absolute bottom-0 left-0 top-0 z-9 shadow"
       collapse-mode="width"
       :collapsed-width="64"
       :width="240"

@@ -7,6 +7,7 @@
 -->
 <script setup lang="ts">
 import articles from '~/articles.json'
+
 const cardData = ref([
   { name: '访问量', value: '1,000,000', colors: ['#ec4786', '#b955a4'] },
   { name: '上传量', value: '1,000,000', colors: ['#865ec0', '#5144b4'] },
@@ -44,14 +45,14 @@ const columns = [
 
 <template>
   <div class="p-3">
-    <n-card title="数据统计" :bordered="false" class="rounded-16px shadow-sm my-5">
+    <n-card title="数据统计" :bordered="false" class="my-5 rounded-16px shadow-sm">
       <n-grid cols="s:1 m:2 l:4" responsive="screen" :x-gap="16" :y-gap="16">
         <n-grid-item v-for="item, idx in cardData" :key="idx">
           <gradient-bg class="h-100px" :start-color="item.colors[0]" :end-color="item.colors[1]">
             <h3 class="text-16px">
               {{ item.name }}
             </h3>
-            <div class="flex justify-end text-2xl pt-12px pr-5">
+            <div class="flex justify-end pr-5 pt-12px text-2xl">
               {{ item.value }}
             </div>
           </gradient-bg>

@@ -15,13 +15,13 @@
       <h1 class="text-center text-2xl">
         SHY VUE Naive Admin
       </h1>
-      <h2 class="text-xl my-2">
+      <h2 class="my-2 text-xl">
         简介
       </h2>
       <p dir="auto">
         <a href="https://github.com/shy1118999/shy-naive-admin">shy-naive-admin</a> 是一个基于<code>Vue3</code>、<code>Vite4</code>、<code>TypeScript</code>、<code>NaiveUI</code>、<code>Pinia</code>、<code>UnoCSS</code>的开箱即用的中后台前端模版。
       </p>
-      <h2 class="text-xl mb-2">
+      <h2 class="mb-2 text-xl">
         特性
       </h2>
       <ul dir="auto">
@@ -30,7 +30,7 @@
         <li><em><strong>权限路由</strong></em>：更加用户身份加载不同路由。</li>
         <li><em><strong>useEcharts</strong></em>：快速使用echarts制作图表。</li>
       </ul>
-      <h2 class="text-xl my-2">
+      <h2 class="my-2 text-xl">
         主要技术栈
       </h2>
       <ul dir="auto">
@@ -45,7 +45,7 @@
         <li>+ <a href="https://github.com/axios/axios">axios</a>-Promise based HTTP client for the browser and node.js</li>
         <li>+ <a href="https://github.com/unocss/unocss">UnoCSS</a>-The instant on-demand atomic CSS engine.</li>
       </ul>
-      <h2 class="text-xl my-2">
+      <h2 class="my-2 text-xl">
         项目示例图
       </h2>
       <p dir="auto">

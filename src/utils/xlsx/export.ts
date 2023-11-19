@@ -1,8 +1,8 @@
 /*
  * @Author: shaohang-shy
  * @Date: 2022-08-28 20:52:43
- * @LastEditors: shaohang-shy
- * @LastEditTime: 2023-01-30 09:54:33
+ * @LastEditors: shy1118
+ * @LastEditTime: 2023-11-19 14:19:18
  * @Description: xlsx export
  */
 import { saveAs } from 'file-saver'
@@ -139,8 +139,12 @@ function sheetFromArrayOfArrays(data: (string | number)[][]) {
         r: R,
       })
 
-      if (typeof cell.v === 'number') { cell.t = 'n' }
-      else if (typeof cell.v === 'boolean') { cell.t = 'b' }
+      if (typeof cell.v === 'number') {
+        cell.t = 'n'
+      }
+      else if (typeof cell.v === 'boolean') {
+        cell.t = 'b'
+      }
       else if (cell.v instanceof Date) {
         cell.t = 'n'
         cell.z = XLSX.SSF._table[14]

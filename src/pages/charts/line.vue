@@ -6,7 +6,8 @@
  * @Description: line chart
 -->
 <script setup lang="ts">
-import { type ECOption } from '~/composables'
+import type { ECOption } from '~/composables'
+
 const lineOptions = ref<ECOption>({
   title: {
     text: 'Stacked Line',
@@ -74,6 +75,6 @@ const { domRef: lineRef } = useEcharts(lineOptions)
 
 <template>
   <div class="p-2">
-    <div ref="lineRef" w-full h-600px />
+    <div ref="lineRef" h-600px w-full />
   </div>
 </template>

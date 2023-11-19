@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-08-28 13:48:30
  * @Description: types
  */
-import { RoleType } from './route'
+import type { RoleType } from './route'
 
 export interface UserInfo {
   nickname: string

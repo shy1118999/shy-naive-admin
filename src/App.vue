@@ -8,6 +8,7 @@
 <script lang="ts" setup>
 import { darkTheme } from 'naive-ui'
 import { useAppStore } from '~/store'
+
 const appStore = useAppStore()
 </script>
 

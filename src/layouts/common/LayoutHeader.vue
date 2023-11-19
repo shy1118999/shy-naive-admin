@@ -14,6 +14,7 @@ import MenuLightDark from './MenuLightDark.vue'
 import MenuUserInfo from './MenuUserInfo.vue'
 import { useAppStore } from '~/store'
 import settings from '~/settings'
+
 const { title, logo } = settings
 const appStore = useAppStore()
 // const themeVars = useThemeVars()
@@ -21,8 +22,8 @@ const isMobile = useLayout().isMobile
 </script>
 
 <template>
-  <n-layout-header class="flex justify-between px-5 items-center h-60px absolute z-10 left-0 top-0 right-0 header  border-b border-gray-300/50">
-    <div class="flex justify-center items-center">
+  <n-layout-header class="header absolute left-0 right-0 top-0 z-10 h-60px flex items-center justify-between border-b border-gray-300/50 px-5">
+    <div class="flex items-center justify-center">
       <!-- icon -->
       <!-- title -->
       <MenuLogo :logo="logo" :title="title" />
@@ -31,7 +32,7 @@ const isMobile = useLayout().isMobile
       <!-- breadcrumb -->
       <MenuBreadcrumb v-if="!isMobile" />
     </div>
-    <div class="flex justify-center items-center children-mx-1">
+    <div class="flex items-center justify-center children-mx-1">
       <!-- search -->
       <!-- fullscreen -->
       <MenuScreenfull id="screenfull" />
@@ -42,4 +43,3 @@ const isMobile = useLayout().isMobile
     </div>
   </n-layout-header>
 </template>
-

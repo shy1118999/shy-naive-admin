@@ -6,7 +6,7 @@
  * @Description: Nightingale Chart
 -->
 <script setup lang="ts">
-import { type ECOption } from '~/composables'
+import type { ECOption } from '~/composables'
 
 const lineOptions = ref<ECOption>({
   title: {
@@ -91,6 +91,6 @@ const { domRef: chartRef } = useEcharts(lineOptions)
 
 <template>
   <div class="p-2">
-    <div ref="chartRef" w-full h-600px />
+    <div ref="chartRef" h-600px w-full />
   </div>
 </template>

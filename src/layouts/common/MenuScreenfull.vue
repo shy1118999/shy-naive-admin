@@ -7,6 +7,7 @@
 -->
 <script setup lang="ts">
 import screenfull from 'screenfull'
+
 const isFullscreen = ref(false)
 screenfull.on('change', change)
 function change() {
@@ -16,7 +17,7 @@ function change() {
 
 <template>
   <n-icon size="30" @click="screenfull.toggle()">
-    <div v-if="isFullscreen" class="i-custom-fullscreen-exit w-full h-full" />
-    <div v-else class="i-custom-fullscreen w-full h-full" />
+    <div v-if="isFullscreen" class="i-custom-fullscreen-exit h-full w-full" />
+    <div v-else class="i-custom-fullscreen h-full w-full" />
   </n-icon>
 </template>

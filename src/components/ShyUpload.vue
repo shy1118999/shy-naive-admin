@@ -7,6 +7,7 @@
 -->
 <script setup lang="ts">
 import type { UploadFileInfo } from 'naive-ui'
+
 const props = defineProps<{
   accept: string
   tips: string
@@ -28,7 +29,7 @@ function handleUpload({ file }: { file: UploadFileInfo }) {
     <n-upload-dragger>
       <div class="m-3">
         <n-icon size="48" :depth="3">
-          <div class="w-full h-full text-gray i-custom-folder-upload" />
+          <div class="i-custom-folder-upload h-full w-full text-gray" />
         </n-icon>
       </div>
       <n-text v-if="tips" class="text-sm">

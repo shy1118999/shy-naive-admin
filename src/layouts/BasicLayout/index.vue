@@ -16,10 +16,10 @@ const isMobile = useLayout().isMobile
 </script>
 
 <template>
-  <n-layout class="w-full h-full pt-60px" :class="{ 'hide-sidebar': !appStore.sidebar.opened, 'open-sidebar': appStore.sidebar.opened, 'without-animation': appStore.sidebar.withoutAnimation, 'mobile': appStore.device === 'mobile' }">
+  <n-layout class="h-full w-full pt-60px" :class="{ 'hide-sidebar': !appStore.sidebar.opened, 'open-sidebar': appStore.sidebar.opened, 'without-animation': appStore.sidebar.withoutAnimation, 'mobile': appStore.device === 'mobile' }">
     <!-- header -->
     <LayoutHeader />
-    <n-layout has-sider class="w-full h-full" :style="{ paddingLeft: isMobile ? '0px' : appStore.sidebar.opened ? '64px' : '240px' }">
+    <n-layout has-sider class="h-full w-full" :style="{ paddingLeft: isMobile ? '0px' : appStore.sidebar.opened ? '64px' : '240px' }">
       <!-- aside -->
       <LayoutAside :collapsed="appStore.sidebar.opened" @update:collapsed="appStore.toggleSideBar" />
       <!-- content -->

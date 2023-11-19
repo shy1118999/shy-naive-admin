@@ -13,9 +13,9 @@ const emits = defineEmits(['toggle'])
 </script>
 
 <template>
-  <div id="hamburger-container" class="p-15px cursor-pointer" @click="emits('toggle')">
+  <div id="hamburger-container" class="cursor-pointer p-15px" @click="emits('toggle')">
     <n-icon size="20" class="menu-switch transition-transform duration-500" :class="{ 'is-active': props.isActive }">
-      <div class="w-full h-full i-custom-menu-open" />
+      <div class="i-custom-menu-open h-full w-full" />
     </n-icon>
   </div>
 </template>

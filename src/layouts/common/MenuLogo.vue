@@ -14,8 +14,8 @@ const props = defineProps<{
 
 <template>
   <div>
-    <router-link class="flex justify-center items-center" to="/">
-      <img v-if="props.logo" :src="logo" class="w-10 h-10 mr-2">
+    <router-link class="flex items-center justify-center" to="/">
+      <img v-if="props.logo" :src="logo" class="mr-2 h-10 w-10">
       <h1 v-if="props.title" class="font-bold lt-sm:hidden">
         {{ title }}
       </h1>

@@ -6,6 +6,7 @@
  * @Description: request
  */
 import axios from 'axios'
+
 // const host = '/' // 如果是mock模式 就不配置host 会走本地Mock拦截
 const host = '/' // 如果是mock模式 就不配置host 会走本地Mock拦截
 

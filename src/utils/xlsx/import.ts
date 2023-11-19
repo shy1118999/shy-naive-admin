@@ -7,6 +7,7 @@
  */
 import * as XLSX from 'xlsx'
 import { sheetToHtml, sheetToJson } from './utils'
+
 export function parseAllSheetExcel(file: File, options?: XLSX.Sheet2JSONOpts) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()

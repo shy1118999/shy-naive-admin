@@ -7,6 +7,7 @@
 -->
 <script setup lang="ts">
 import SvgIcon from '~/components/SvgIcon.vue'
+
 const iconNames = Object.entries(import.meta.glob('../../assets/icons/*.svg', { eager: false })).map(([filename]) => {
   return /.+\/(.*?).svg$/.exec(filename)?.[1]
 })
@@ -37,7 +38,7 @@ watchEffect(() => {
     <p>图标来自<a class="text-blue" href="https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=42779">iconfont</a>，商业使用请联系作者。</p>
 
     <div class="flex flex-wrap">
-      <div v-for="icon in iconNames" :key="icon" class="w-25 h-25 cursor-pointer flex flex-col items-center justify-center">
+      <div v-for="icon in iconNames" :key="icon" class="h-25 w-25 flex flex-col cursor-pointer items-center justify-center">
         <SvgIcon :size="40" :name="icon!" @click="handleCopy(icon!, 'icon')" />
         <span @click="handleCopy(icon!)">{{ icon }}</span>
       </div>

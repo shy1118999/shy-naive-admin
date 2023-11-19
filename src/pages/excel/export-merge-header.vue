@@ -22,12 +22,10 @@ const columns: TableColumns = [
     children: [{
       title: '作者',
       key: 'author',
-    },
-    {
+    }, {
       title: '标题',
       key: 'title',
-    },
-    {
+    }, {
       title: '浏览数',
       key: 'pageviews',
     }],

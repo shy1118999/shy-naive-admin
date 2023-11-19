@@ -8,6 +8,7 @@
 <script setup lang="ts">
 import { toggleDark } from '~/composables/dark'
 import { useAppStore } from '~/store'
+
 const appStore = useAppStore()
 function toggle() {
   appStore.toggleTheme()
@@ -17,7 +18,7 @@ function toggle() {
 
 <template>
   <n-icon size="30" @click="toggle">
-    <div v-if="appStore.theme === 'dark'" class="i-carbon:moon w-full h-full" />
-    <div v-else class="i-carbon:sun w-full h-full" />
+    <div v-if="appStore.theme === 'dark'" class="i-carbon:moon h-full w-full" />
+    <div v-else class="i-carbon:sun h-full w-full" />
   </n-icon>
 </template>

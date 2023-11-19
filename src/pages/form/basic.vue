@@ -8,6 +8,7 @@
 <script setup lang="tsx">
 import type { TableColumns } from 'naive-ui/es/data-table/src/interface'
 import type { Article } from '~/store/modules/article'
+
 const router = useRouter()
 const articleStore = useArticleStore()
 articleStore.loadList()

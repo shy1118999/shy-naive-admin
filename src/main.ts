@@ -10,8 +10,10 @@ import { store } from './store'
 
 import App from './App.vue'
 import router from '~/router'
+
 // import '@unocss/reset/tailwind.css'
 import './styles/main.css'
+
 // import './styles/reset.css'
 import 'uno.css'
 import '~/router/permissions'

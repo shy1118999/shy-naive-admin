@@ -7,7 +7,7 @@
 -->
 <script setup lang="ts">
 import * as echarts from 'echarts/core'
-import { type ECOption } from '~/composables'
+import type { ECOption } from '~/composables'
 
 const lineOptions = ref<ECOption>({
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
@@ -191,6 +191,6 @@ const { domRef: chartRef } = useEcharts(lineOptions)
 
 <template>
   <div class="p-2">
-    <div ref="chartRef" w-full h-600px />
+    <div ref="chartRef" h-600px w-full />
   </div>
 </template>

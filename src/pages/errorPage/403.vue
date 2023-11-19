@@ -14,7 +14,7 @@ function goBack() {
 </script>
 
 <template>
-  <div class="flex justify-center items-center flex-col w-full h-full">
+  <div class="h-full w-full flex flex-col items-center justify-center">
     <div class="text-30 color-blue">
       4<span class="color-green">0</span>3
     </div>
@@ -33,4 +33,3 @@ function goBack() {
     </div>
   </div>
 </template>
-

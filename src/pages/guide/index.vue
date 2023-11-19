@@ -6,8 +6,12 @@
  * @Description: guide
 -->
 <script setup lang="ts">
-import Driver from 'driver.js' // import driver.js
-import 'driver.js/dist/driver.min.css' // import driver.js css
+import Driver from 'driver.js'
+
+// import driver.js
+import 'driver.js/dist/driver.min.css'
+
+// import driver.js css
 import steps from './steps'
 
 function guide() {
@@ -20,7 +24,7 @@ function guide() {
 
 <template>
   <div class="p-3">
-    <p class="bg-gray/20 py-2 px-3 mb-3">
+    <p class="mb-3 bg-gray/20 px-3 py-2">
       引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基于 <a
         href="https://github.com/kamranahmedse/driver.js" target="_black"
         class="text-blue"
