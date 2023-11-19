@@ -1,8 +1,8 @@
 <!--
  * @Author: shaohang-shy
  * @Date: 2022-08-22 17:56:10
- * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-08-24 18:17:48
+ * @LastEditors: shy1118
+ * @LastEditTime: 2023-11-19 13:58:51
  * @Description: Clock Chart
 -->
 
@@ -203,6 +203,8 @@ const lineOptions = ref<ECOption>({
 let intervalId: NodeJS.Timer
 
 onUnmounted(() => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   clearInterval(intervalId)
 })
 const { domRef: chartRef } = useEcharts(lineOptions, (chart) => {
