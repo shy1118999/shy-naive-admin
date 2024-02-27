@@ -1,15 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Counter.vue > should render 1`] = `
-"<div class=\\"m-5\\">
-  <div>10</div>
-  <div><button class=\\"inc btn m-2\\"> + </button><button class=\\"dec btn m-2\\"> - </button></div>
-</div>"
-`;
-
 exports[`counter.vue > should render 1`] = `
-"<div class=\\"m-5\\">
+"<div class="m-5">
   <div>10</div>
-  <div><button class=\\"inc m-2 btn\\"> + </button><button class=\\"dec m-2 btn\\"> - </button></div>
+  <div><button class="inc m-2 btn"> + </button><button class="dec m-2 btn"> - </button></div>
 </div>"
 `;

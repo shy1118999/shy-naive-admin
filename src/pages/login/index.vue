@@ -53,10 +53,10 @@ async function handleLogin() {
     <div class="w-md">
       <!-- 登录面板 -->
       <div>
-        <h1 class="text-5xl leading-loose text-light-900 lt-md:text-3xl">
+        <h1 class="text-5xl text-light-900 leading-loose lt-md:text-3xl">
           登录到
         </h1>
-        <h1 class="text-5xl leading-loose text-light-900 lt-md:text-3xl">
+        <h1 class="text-5xl text-light-900 leading-loose lt-md:text-3xl">
           Vue Naive Admin
         </h1>
       </div>
