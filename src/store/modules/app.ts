@@ -17,6 +17,7 @@ export const useAppStore = defineStore('app-store', {
     device: 'desktop',
     theme: useLocalStorage('theme', 'light'),
     showTagsView: settings.tagsView === true,
+    pageTransitionName: 'fade-slide' as 'fade' | 'fade-slide' | 'fade-bottom' | 'fade-top' | 'fade-scale' | 'zoom-fade' | 'zoom-out' | 'none',
   }),
   actions: {
     toggleSideBar() {

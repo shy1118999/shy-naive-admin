@@ -13,6 +13,7 @@ import router from '~/router'
 
 // import '@unocss/reset/tailwind.css'
 import './styles/main.css'
+import './styles/page-transition.css'
 
 // import './styles/reset.css'
 import 'uno.css'
