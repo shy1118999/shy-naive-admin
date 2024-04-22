@@ -15,6 +15,7 @@ import { useUserStore } from '~/store'
 
 // no redirect whitelist
 import settings from '~/settings'
+
 const whiteList = ['/login', '/403', '/404']
 // 路由守卫
 router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
