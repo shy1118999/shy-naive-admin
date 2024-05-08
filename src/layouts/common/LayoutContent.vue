@@ -16,7 +16,7 @@ const tagsViewStore = useTagsViewStore()
   <n-layout-content :style="{ paddingTop: appStore.showTagsView ? '40px' : '0' }">
     <LayoutTagsView v-show="appStore.showTagsView" />
     <router-view v-slot="{ Component, route }">
-      <Transition mode="out-in" :name="appStore.pageTransitionName">
+      <Transition mode="out-in" :name="appStore.pageTransitionName ?? 'fade-slide'">
         <keep-alive :include="tagsViewStore.cachedViews">
           <component :is="Component" :key="route.fullPath" />
         </keep-alive>
