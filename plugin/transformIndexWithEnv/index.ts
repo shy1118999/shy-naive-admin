@@ -10,7 +10,7 @@ export function transformIndexWithEnv(data: Record<string, string>) {
     name: 'transform-index-with-env',
     transformIndexHtml(html: string) {
       return html.replace(
-        /{{(.*?)}}/g,
+        /\{\{(.*?)\}\}/g,
         (s, k) => {
           return data[k.trim()] ?? s
         },
