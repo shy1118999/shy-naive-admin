@@ -41,7 +41,8 @@ async function handleLogin() {
       path: (redirect || '/') as string,
     })
   }
-  catch (_e) {
+  catch (e) {
+    console.error(e)
   }
 }
 </script>

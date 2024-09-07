@@ -6,6 +6,7 @@
  * @Description: FormBasic
 -->
 <script setup lang="tsx">
+import { NButton, NSpace } from 'naive-ui'
 import type { TableColumns } from 'naive-ui/es/data-table/src/interface'
 import type { Article } from '~/store/modules/article'
 
@@ -42,14 +43,14 @@ const columns: TableColumns<Article> = [
     align: 'center',
     render(rowData: Article) {
       return (
-        <n-space justify="center">
-          <n-button type="primary" size="small" onClick={() => { router.push({ path: '/form/edit', query: { id: rowData.id } }) }}>
+        <NSpace justify="center">
+          <NButton type="primary" size="small" onClick={() => { router.push({ path: '/form/edit', query: { id: rowData.id } }) }}>
             编辑
-          </n-button>
-          <n-button type="error" size="small" onClick={() => { handleDeleteArticle(rowData.id) }}>
+          </NButton>
+          <NButton type="error" size="small" onClick={() => { handleDeleteArticle(rowData.id) }}>
             删除
-          </n-button>
-        </n-space>
+          </NButton>
+        </NSpace>
       )
     },
   },

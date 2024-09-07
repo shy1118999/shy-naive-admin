@@ -44,6 +44,7 @@ router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormali
           next({ ...to, replace: true })
         }
         catch (error) {
+          console.error(error)
           userState.removeToken()
           next(`/login?redirect=${to.path}`)
           $loadingBar.finish()
