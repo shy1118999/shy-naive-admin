@@ -12,6 +12,7 @@ const routes: RouteRecord[] = [
   {
     path: '/charts',
     name: 'Charts',
+    redirect: '/charts/line',
     component: BasicLayout,
     meta: {
       title: '图表',
